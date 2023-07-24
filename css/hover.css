@@ -1,4 +1,8 @@
-﻿.black_oh:hover {
+.black_oh a:hover {
     background-color: black;
-    color: white;
+    color: white !important;
+}
+
+.contact-list img:hover {
+    background-color: #7CBBEB;
 }
