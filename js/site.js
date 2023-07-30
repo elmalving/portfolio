@@ -1,6 +1,16 @@
 document.getElementById("currentYear").appendChild(document.createTextNode(new Date().getFullYear()))
 
 
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "../css/hover.css";
+        document.head.appendChild(link);
+    }, document.title === "Mykyta Hromov" ? 3000 : 2000);
+});
+
+
 const json_path = `../json/${window.location.pathname != '/' ? window.location.pathname.split('/').pop().split('.')[0].toLowerCase() : 'index'}.json`;
 const lang_button = document.getElementById('lang-button');
 lang_button.addEventListener('click', change_language);
