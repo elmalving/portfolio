@@ -57,9 +57,11 @@ html {
 }
 
 header {
+    overflow: hidden;
     background-color: white;
     width: 100%;
     position: fixed;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 header nav {
@@ -72,7 +74,7 @@ header nav {
 }
 
 .text-load {
-    color: rgba(255, 255, 255, 0);
+    color: rgba(0, 0, 0, 0);
     position: relative;
     animation: show 2s step-end forwards;
 }
@@ -128,10 +130,6 @@ header nav {
 
 .margin-left {
     margin-left: 5%;
-}
-
-.box-shadow {
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 .pre-loader {
