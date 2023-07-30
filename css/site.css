@@ -94,6 +94,7 @@ header nav {
     100% {
         color: rgba(0, 0, 0, 1);
         position: initial;
+        -webkit-position: initial;
     }
 }
 
