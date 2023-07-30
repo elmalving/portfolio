@@ -15,26 +15,16 @@ const json_path = `../json/${window.location.pathname != '/' ? window.location.p
 const lang_button = document.getElementById('lang-button');
 lang_button.addEventListener('click', change_language);
 
-const current_lang = get_current_language()
+let current_lang = localStorage.getItem('language');
 if (current_lang === null) {
-    localStorage.setItem('language', 'en');
+    translate_page('en');
 }
 else {
     translate_page(current_lang);
 }
 
-function get_current_language() {
-    return localStorage.getItem('language');
-}
-
 function change_language() {
-    const current_lang = get_current_language();
-    if (current_lang == 'en') {
-        translate_page('cz');
-    }
-    else {
-        translate_page('en');
-    }
+    current_lang == 'en' ? translate_page('cz') : translate_page('en');
 }
 
 function translate_page(language) {
@@ -50,4 +40,5 @@ function translate_page(language) {
         .catch(error => console.error('Error reading JSON file:', error));
 
     localStorage.setItem('language', language);
+    current_lang = language;
 }
