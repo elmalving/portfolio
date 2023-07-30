@@ -1,6 +1,6 @@
 html {
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     min-height: 100%;
 }
 
@@ -19,23 +19,23 @@ html {
 
 @media (min-width: 768px) {
     html {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .theme {
         display: block;
-        height: 4rem;
+        height: 4.65rem;
         width: 25rem;
-        margin: 0;
-        text-align: left;
+        text-align: center;
         background-color: white;
         box-shadow: none;
         border-bottom: 5px solid black;
     }
 
     .theme h1 {
-        padding-left: 30%;
-        padding-bottom: 2%;
+        width: max-content;
+        margin-left: 30%;
+        margin-bottom: 0;
     }
 
     #lang-button {
@@ -57,6 +57,7 @@ html {
 }
 
 header {
+    background-color: white;
     width: 100%;
     position: fixed;
 }
@@ -70,11 +71,45 @@ header nav {
     margin-top: 60px;
 }
 
+.text-load {
+    color: rgba(255, 255, 255, 0);
+    position: relative;
+    animation: show 2s step-end forwards;
+}
+
+.text-load::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    animation: text-load 2s ease-in-out;
+    background-color: black;
+}
+
+@keyframes show {
+    50% {
+        color: rgba(0, 0, 0, 1);
+    }
+    100% {
+        color: rgba(0, 0, 0, 1);
+        position: initial;
+    }
+}
+
+@keyframes text-load {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+        background-color: none;
+    }
+}
+
 .main-p {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin: 2.5% 10%;
     font-size: 150%;
 }
 
@@ -130,6 +165,7 @@ header nav {
     background-image: url('../img/en.svg');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     border: 3px solid black;
     border-radius: 15%;
     height: 35px;
