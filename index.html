@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mykyta</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/site.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <div class="pre-loader">
-        <video playsinline autoplay muted loop>
-            <source src="video/pre-loader.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="page after-load">
+    <canvas id="background"></canvas>
+    <div class="page">
         <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow">
                 <div class="container">
@@ -29,17 +26,17 @@
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1 hover-black border-r">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="index.html">
+                                <a class="nav-link" href="index.html">
                                     <div class="text-load">Home</div>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="Pages/Projects.html">
+                                <a class="nav-link" href="Pages/Projects.html">
                                     <div class="text-load">Projects</div>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="Pages/Privacy.html">
+                                <a class="nav-link" href="Pages/Privacy.html">
                                     <div class="text-load">Privacy</div>
                                 </a>
                             </li>
@@ -51,10 +48,16 @@
 
         <div class="content">
             <div class="theme">
-                <h1 class="home-title display-4 text-load">Welcome</h1>
+                <h1 class="home-title display-4"></h1>
             </div>
-            <div class="text-center">
-                <article class="main-p"></article>
+            <div class="main-text-container">
+                <article class="main-text">
+                    <div class="text-card"></div>
+                    <div class="text-card"></div>
+                    <div class="text-card"></div>
+                    <div class="text-card"></div>
+                    <div class="text-card"></div>
+                </article>
             </div>
         </div>
 
@@ -62,17 +65,18 @@
             <div class="container contact-list">
                 <a href="https://telegram.me/doomofeternity"><img title="Telegram Messenger" src="img/telegram.png"></a>
                 <a href="https://www.linkedin.com/in/mykyta-hromov-889390241"><img title="LinkedIn Profile" src="img/linkedin.png"></a>
-                <a href="https://discord.com/users/486399250201182208"><img title="Discord Profile" src="img/discord.png"></a>
+                <a href="https://github.com/elmalving"><img title="GitHub Profile" src="img/github.png"></a>
                 <a href="https://www.instagram.com/nicktooweak"><img title="Instagram Profile" src="img/instagram.png"></a>
             </div>
-            <div class="text-muted container">
-                &copy; <span id="currentYear"></span> - Mykyta Hromov Portfolio - <a href="Pages/Privacy.html">Privacy</a>
+            <div class="text-muted container small-text">
+                &copy; <span id="currentYear"></span> - Mykyta Hromov Portfolio - <a class="link-success" href="Pages/Privacy.html">Privacy</a>
             </div>
         </footer>
     </div>
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/illusion.js"></script>
     <script src="js/site.js"></script>
-    <script src="js/loader.js"></script>
 </body>
 </html>
