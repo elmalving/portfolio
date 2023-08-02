@@ -1,11 +1,11 @@
 .hover-black a:hover {
-    background-color: black;
+    background-color: white;
 }
 
 .hover-black a:hover div {
-    color: white !important;
+    color: black !important;
 }
 
 .contact-list img:hover {
-    background-color: #7CBBEB;
+    transform: scale(1.1);
 }
