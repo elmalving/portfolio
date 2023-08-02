@@ -1,10 +1,22 @@
 {
     "en": {
         ".home-title": "Welcome",
-        ".main-p": "I'm Mykyta Hromov, I am 19 years old and I am from Ukraine. I am fluent in English, Czech, Ukrainian and Russian. Currently I am looking for a job in an IT company or IT department.<br><br>2018-2020 completed programming courses at the Hillel computer school (Dnipro, Ukraine): web development (HTML, CSS, JS, mySQL, C#), also I have intermediate-level proficiency in the Python programming language.<br><br>Previously, I was engaged in swimming for 7 years and reached the level of candidate for master of sports. In 2021, I graduated from the music school with the class \"Guitar\". Sociable and have experience working in a team.<br><br>Currently, I have a little professional experience as a programmer, but I am constantly improving my knowledge and am ready to devote myself to work 25 hours a day!<br><br>I am committed to staying updated with the latest industry trends and technologies to enhance my skill set and deliver high-quality solutions. I embrace challenges and approach them with a growth mindset, always seeking new opportunities to broaden my expertise. With a drive for constant improvement, I am eager to take on new learning experiences and contribute to impactful projects."
+        ".text-card": {
+            "0": "In 2020 I have completed programming courses at the highly acclaimed “Hillel IT School”. (https://ithillel.ua) The courses consisted of in-dept learning and practising Web Development {HTML, CSS, JS, mySQL, C#}, I also have a high level of proficiency in the Python programming language.",
+            "1": "Currently, I have little professional experience as a programmer working on \"Social media scheduler\" project at Better Plan, but I am fully ready to devote myself to enhance my skill set and deliver high-quality solutions.",
+            "2": "I embrace challenges and approach them with a growth mindset, always seeking new opportunities to broaden my expertise. With a drive for constant improvement, I am eager to take on new learning experiences and contribute to impactful projects.",
+            "3": "Sociable and have experience working in a team.",
+            "4": "Fluent in English and Czech, native in Russian and Ukrainian."
+        }
     },
     "cz": {
         ".home-title": "Dobrý den",
-        ".main-p": "Jsem Mykyta Hromov, je mi 19 let a jsem z Ukrajiny. Mluvím plynně anglicky, česky, ukrajinsky a rusky. V současné době hledám práci v IT společnosti nebo IT oddělení.<br><br>2018-2020 absolvoval kurzy programování na počítačové škole Hillel (Dnipro, Ukrajina): vývoj webových aplikací (HTML, CSS, JS, mySQL, C#), dále mám středně pokročilou znalost programovacího jazyka Python.<br><br>Předtím jsem se 7 let věnoval plavání a dosáhl jsem úrovně kandidáta na mistra sportu. V roce 2021 jsem absolvoval hudební školu ve třídě \"Kytara\". Společenský a má zkušenosti s prací v týmu.<br><br>V současné době mám malou profesní zkušenost jako programátor, ale své znalosti neustále zdokonaluji a jsem připraven se práci věnovat 25 hodin denně!<br><br>Jsem odhodlán udržovat aktuální informace o nejnovějších trendech a technologiích v oboru, abych zlepšil své dovednosti a poskytoval vysoce kvalitní řešení. Přijímám výzvy a přistupuji k nim s růstovým myšlením, vždy hledám nové příležitosti, jak rozšířit své odborné znalosti. S touhou po neustálém zlepšování se těším na nové vzdělávací zkušenosti a přispívám k účinným projektům."
+        ".text-card": {
+            "0": "V roce 2020 jsem absolvoval kurzy programování na vysoce uznávané „Hillel IT School“. (https://ithillel.ua) Kurzy se skládaly z důkladného učení a procvičování vývoje webu {HTML, CSS, JS, mySQL, C#}, také mám vysokou úroveň znalosti programovacího jazyka Python.",
+            "1": "V současné době mám málo profesionálních zkušeností jako programátor pracující na projektu „Social media scheduler“ ve společnosti Better Plan, ale jsem plně připraven věnovat se rozšiřování svých dovedností a poskytování vysoce kvalitních řešení.",
+            "2": "Přijímám výzvy a přistupuji k nim s růstovým myšlením, vždy hledám nové příležitosti, jak rozšířit své odborné znalosti. S touhou po neustálém zlepšování se těším na nové vzdělávací zkušenosti a přispívám k účinným projektům.",
+            "3": "Společenský a mám zkušenosti s prací v týmu.",
+            "4": "Mluvím plynně anglicky a česky, rodilý ruský a ukrajinský."
+        }
     }
 }
