@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
         link.rel = "stylesheet";
         link.href = "../css/hover.css";
         document.head.appendChild(link);
-    }, document.title === "Mykyta Hromov" ? 3000 : 2000);
+    }, 2000);
 });
 
 
@@ -34,8 +34,16 @@ function translate_page(language) {
         .then(response => response.json())
         .then(translations => {
             for (const item in translations[language]) {
-                document.querySelector(item).innerHTML = translations[language][item];
-            }
+                if (typeof translations[language][item] === 'object') {
+                    document.querySelectorAll(item).forEach(function(div, index) {
+                        div.innerHTML = translations[language][item][index];
+                    });
+                }
+                else {
+                    console.log(document.querySelector(item))
+                    document.querySelector(item).innerHTML = translations[language][item];
+                };
+            };
         })
         .catch(error => console.error('Error reading JSON file:', error));
 
