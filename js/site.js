@@ -40,7 +40,6 @@ function translate_page(language) {
                     });
                 }
                 else {
-                    console.log(document.querySelector(item))
                     document.querySelector(item).innerHTML = translations[language][item];
                 };
             };
