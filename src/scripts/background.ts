@@ -1,8 +1,12 @@
 export const matrixBackground = (
-    context: CanvasRenderingContext2D,
+    canvas: HTMLCanvasElement,
     pageWidth: number,
     pageHeight: number
 ) => {
+    canvas.width = pageWidth;
+    canvas.height = pageHeight;
+
+    const context = canvas.getContext('2d')!;
     const numbers = '0123456789';
     const latin = 'ABCDEFGHIKLMNOPQRSTVXYZ';
     const katakana =

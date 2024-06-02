@@ -1,0 +1,58 @@
+#background {
+    background-color: #0f0;
+    position: absolute;
+    display: flex;
+    user-select: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 8%;
+    background-color: #092800;
+    box-shadow: 0 1px 5px rgba(15, 75, 0, 0.6);
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.nav-brand {
+    margin: auto 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    animation: transfusion 3s 0.5s linear infinite;
+}
+@keyframes transfusion {
+    0% {
+        color: #00ff00;
+    }
+    50% {
+        color: #00aa00;
+    }
+    100% {
+        color: #00ff00;
+    }
+}
+
+.lang-button {
+    height: 50%;
+    margin: auto 0;
+    border: 3px solid #ffffff;
+    border-radius: 15%;
+}
+
+.nav-list {
+    display: flex;
+    margin: auto 0;
+    gap: 10%;
+}
