@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react';
 import { matrixBackground } from './scripts';
+import './css/global.css';
 
 const App = () => {
-    const background = useRef(null);
+    const background = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        matrixBackground(
-            background.current,
-            window.innerWidth,
-            window.innerHeight
-        );
+        const canvas = background.current;
+
+        if (canvas === null) return;
+
+        matrixBackground(canvas, window.innerWidth, window.innerHeight);
     }, []);
 
     return <canvas ref={background} id="background"></canvas>;
