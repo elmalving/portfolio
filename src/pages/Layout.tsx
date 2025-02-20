@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Outlet } from 'react-router-dom';
 import { matrixBackground } from '../scripts';
-import '../css';
+import * as styles from '../css';
 import Navbar from '../components';
 
 export const Layout = () => {
@@ -19,7 +19,7 @@ export const Layout = () => {
         <>
             <Navbar />
             <Outlet />
-            <canvas ref={background} id="background"></canvas>
+            <canvas ref={background} className={styles.background}></canvas>
         </>
     );
 };

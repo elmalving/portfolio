@@ -1,14 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import { en } from '../assets/country-flags';
+import * as styles from '../css';
 
 export const Navbar = () => {
     return (
-        <header>
-            <nav className="navbar">
-                <NavLink to="/" className="nav-brand">
+        <header className={styles.header}>
+            <nav className={styles.navbar}>
+                <NavLink to="/" className={styles.navBrand}>
                     Mykyta Hromov
                 </NavLink>
-                <ul className="nav-list">
+                <ul className={styles.navList}>
                     <li>
                         <NavLink to="/">Home</NavLink>
                     </li>
@@ -22,7 +23,7 @@ export const Navbar = () => {
                 <button
                     type="button"
                     aria-label="Change the language"
-                    className="lang-button"
+                    className={styles.langButton}
                 >
                     <img src={en} alt="English flag" />
                 </button>
