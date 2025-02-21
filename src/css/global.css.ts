@@ -10,6 +10,7 @@ globalStyle('*, *::before, *::after', {
 globalStyle('body', {
     color: colors.white,
     fontFamily: 'Orbitron',
+    overflow: 'hidden',
 });
 
 globalStyle('a', {
