@@ -1,18 +1,27 @@
+import { isMobile } from '../../utils/isMobile';
 import { Car } from './car';
 import { Road } from './road';
 import { Traffic } from './types';
 
 export const init = ({
     carCanvas,
-    // networkCanvas,
+    // networkCanvas
 }: {
     carCanvas: HTMLCanvasElement;
     // networkCanvas: HTMLCanvasElement;
 }) => {
     carCanvas.width = 200;
     // networkCanvas.width = 300;
+
     const road = new Road(carCanvas.width / 2, carCanvas.width * 0.9);
-    const car = new Car(road.getLaneCenter(1), 100, 30, 50, 'KEYS', 10);
+    const car = new Car(
+        road.getLaneCenter(1),
+        100,
+        30,
+        50,
+        isMobile ? 'JOYSTICK' : 'KEYS',
+        10
+    );
     const traffic: Traffic = [];
 
     setInterval(() => {

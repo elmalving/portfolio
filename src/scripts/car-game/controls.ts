@@ -19,6 +19,9 @@ export class Controls {
             case 'DUMMY':
                 this.forward = 1;
                 break;
+            case 'JOYSTICK':
+                this.#addJoystickListeners();
+                break;
         }
     }
 
@@ -55,5 +58,34 @@ export class Controls {
                     break;
             }
         };
+    }
+
+    #addJoystickListeners() {
+        const handleJoystickPress = (event: Event) => {
+            const customEvent = event as CustomEvent<{
+                direction: string;
+                pressed: boolean;
+            }>;
+            const { direction, pressed } = customEvent.detail;
+
+            const value = pressed ? 1 : 0;
+
+            switch (direction) {
+                case 'up':
+                    this.forward = value;
+                    break;
+                case 'down':
+                    this.reverse = value;
+                    break;
+                case 'left':
+                    this.left = value;
+                    break;
+                case 'right':
+                    this.right = value;
+                    break;
+            }
+        };
+
+        document.addEventListener('joystick:press', handleJoystickPress);
     }
 }

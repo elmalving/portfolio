@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import * as carGame from '../../scripts/car-game/main';
+import { Joystick } from '../../scripts/car-game/joystick';
 import * as styles from './Projects.css';
+import { isMobile } from '../../utils/isMobile';
 
 export const Projects = () => {
     const carRef = useRef<HTMLCanvasElement>(null);
@@ -17,7 +19,7 @@ export const Projects = () => {
 
         const [road, car, traffic] = carGame.init({
             carCanvas,
-            // networkCanvas
+            // networkCanvas,
         });
         carGame.animate({
             canvases: {
@@ -32,6 +34,7 @@ export const Projects = () => {
         <>
             <canvas className={styles.carCanvas} ref={carRef} />
             {/* <canvas ref={networkRef} /> */}
+            {isMobile && <Joystick />}
         </>
     );
 };
