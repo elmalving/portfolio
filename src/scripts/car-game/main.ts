@@ -5,7 +5,7 @@ import { Traffic } from './types';
 
 export const init = ({
     carCanvas,
-    // networkCanvas
+    // networkCanvas,
 }: {
     carCanvas: HTMLCanvasElement;
     // networkCanvas: HTMLCanvasElement;

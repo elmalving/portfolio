@@ -24,7 +24,7 @@ export const Projects = () => {
         carGame.animate({
             canvases: {
                 car: carCanvas,
-                // network: networkCanvas
+                // network: networkCanvas,
             },
             entities: { road, car, traffic },
         });
