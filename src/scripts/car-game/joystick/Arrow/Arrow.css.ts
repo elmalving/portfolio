@@ -12,6 +12,7 @@ export const arrow = style({
     color: 'black',
     justifyContent: 'center',
     alignItems: 'center',
+    userSelect: 'none',
 });
 
 export const up = style({
