@@ -11,7 +11,7 @@ export const header = style({
 export const navbar = style({
     display: 'flex',
     height: '100%',
-    padding: '0.5rem 0 0.5rem 11%',
+    padding: '0.5rem 0 0.5rem 20%',
 });
 globalStyle(`${navbar} *`, {
     display: 'flex',
