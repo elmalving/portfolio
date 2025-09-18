@@ -12,6 +12,9 @@ globalStyle('body', {
     fontFamily: 'Orbitron',
     overflow: 'hidden',
 });
+globalStyle('body.mobile', {
+    userSelect: 'none',
+});
 
 globalStyle('a', {
     color: 'inherit',

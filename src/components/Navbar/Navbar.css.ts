@@ -6,6 +6,7 @@ export const header = style({
     height: '3.75rem',
     backgroundColor: colors.darkGreen,
     boxShadow: '0 1px 5px rgba(15, 75, 0, 0.6)',
+    position: 'fixed',
 });
 
 export const navbar = style({

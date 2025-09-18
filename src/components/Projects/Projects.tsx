@@ -9,6 +9,10 @@ export const Projects = () => {
     // const networkRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
+        if (isMobile) {
+            document.body.classList.add('mobile');
+        }
+
         const carCanvas = carRef.current;
         // const networkCanvas = networkRef.current;
         if (
@@ -19,6 +23,7 @@ export const Projects = () => {
 
         const [road, car, traffic] = carGame.init({
             carCanvas,
+            controlType: isMobile ? 'JOYSTICK' : 'KEYS',
             // networkCanvas,
         });
         carGame.animate({
@@ -28,6 +33,10 @@ export const Projects = () => {
             },
             entities: { road, car, traffic },
         });
+
+        return () => {
+            document.body.classList.remove('mobile');
+        };
     }, []);
 
     return (
