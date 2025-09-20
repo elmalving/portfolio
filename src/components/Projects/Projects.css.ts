@@ -1,9 +1,22 @@
 import { style } from '@vanilla-extract/css';
 
-export const carCanvas = style({
+export const projectTitle = style({
     display: 'flex',
-    margin: '0 auto',
-    backgroundColor: 'black',
+    width: '100%',
+    height: '10%',
 });
 
-export const container = style({ overflow: 'hidden' });
+export const carCanvas = style({
+    display: 'flex',
+    height: '100%',
+    backgroundColor: 'black',
+    margin: '0 auto',
+});
+
+export const carGame = style({
+    display: 'flex',
+    width: '100%',
+    height: '90%',
+    position: 'relative',
+    overflow: 'hidden',
+});

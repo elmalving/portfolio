@@ -3,6 +3,8 @@ import { Outlet } from 'react-router-dom';
 import { matrixBackground } from '../../scripts';
 import Navbar from '../../components';
 import * as styles from './Layout.css';
+import { TranslatorProvider } from '../../contexts/translator';
+import { Footer } from '../../components/Footer';
 
 export const Layout = () => {
     const background = useRef<HTMLCanvasElement>(null);
@@ -16,10 +18,13 @@ export const Layout = () => {
     }, []);
 
     return (
-        <>
+        <TranslatorProvider>
             <Navbar />
-            <Outlet />
-            <canvas ref={background} className={styles.background}></canvas>
-        </>
+            <main className={styles.content}>
+                <Outlet />
+            </main>
+            <Footer />
+            <canvas ref={background} className={styles.background} />
+        </TranslatorProvider>
     );
 };

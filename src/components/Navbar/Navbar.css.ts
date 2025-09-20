@@ -2,20 +2,29 @@ import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { colors } from '../../css/tokens';
 
 export const header = style({
+    display: 'flex',
     width: '100%',
-    height: '3.75rem',
+    height: '6%',
     backgroundColor: colors.darkGreen,
     boxShadow: '0 1px 5px rgba(15, 75, 0, 0.6)',
-    position: 'fixed',
 });
 
 export const navbar = style({
     display: 'flex',
+    width: '75%',
     height: '100%',
-    padding: '0.5rem 0 0.5rem 20%',
+    gap: '5%',
+    margin: '0 auto',
+
+    '@media': {
+        '(max-width: 768px)': {
+            width: '100%',
+            gap: '12%',
+            marginLeft: '10%'
+        },
+    },
 });
-globalStyle(`${navbar} *`, {
-    display: 'flex',
+globalStyle(`${navbar} > *`, {
     margin: 'auto 0',
 });
 
@@ -32,25 +41,25 @@ export const navBrand = style({
 });
 
 export const navbarToggler = style({
-    height: '100%',
+    height: '75%',
     border: `1px solid ${colors.blackAlpha}`,
     borderRadius: '0.375rem',
     padding: '0.25rem 0.75rem',
-    transform: 'translateX(120px)',
 });
 
 export const navList = style({
-    gap: '1rem',
-    margin: '0 8%',
-    height: '100%',
-});
-globalStyle(`${navbar} li a`, {
+    display: 'flex',
+    gap: '15%',
+    padding: '0 8%',
     fontSize: '115%',
 });
 
-export const langImage = style({
-    width: '35px',
-    height: '35px',
-    border: `3px solid ${colors.white}`,
+export const langButton = style({
+    height: '65%',
     borderRadius: '15%',
+});
+
+export const langImage = style({
+    borderRadius: '15%',
+    border: `3px solid ${colors.white}`,
 });

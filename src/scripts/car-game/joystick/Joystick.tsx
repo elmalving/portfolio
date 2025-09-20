@@ -45,19 +45,21 @@ export const Joystick = () => {
     }, []);
 
     return (
-        <div className={styles.dpadContainer}>
-            <Arrow direction="up" ref={arrowRefs.up}>
-                ↑
-            </Arrow>
-            <Arrow direction="down" ref={arrowRefs.down}>
-                ↓
-            </Arrow>
-            <Arrow direction="left" ref={arrowRefs.left}>
-                ←
-            </Arrow>
-            <Arrow direction="right" ref={arrowRefs.right}>
-                →
-            </Arrow>
+        <div className={styles.joystick}>
+            <div className={styles.dpadContainer}>
+                <Arrow direction="up" ref={arrowRefs.up}>
+                    ↑
+                </Arrow>
+                <Arrow direction="down" ref={arrowRefs.down}>
+                    ↓
+                </Arrow>
+                <Arrow direction="left" ref={arrowRefs.left}>
+                    ←
+                </Arrow>
+                <Arrow direction="right" ref={arrowRefs.right}>
+                    →
+                </Arrow>
+            </div>
         </div>
     );
 };

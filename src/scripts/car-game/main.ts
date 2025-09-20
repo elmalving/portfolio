@@ -58,7 +58,7 @@ export function animate({
     }
     car.update(road.borders, traffic);
 
-    canvases.car.height = window.innerHeight;
+    canvases.car.height = window.innerHeight - 100;
     // canvases.network.height = window.innerHeight;
 
     carCtx.save();
