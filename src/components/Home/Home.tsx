@@ -36,7 +36,6 @@ export const Home = () => {
     );
 
     const articleScroll = (event: React.UIEvent<HTMLDivElement>) => {
-        console.log(textCards);
         const scrollContainer = event.currentTarget;
 
         const containerHeight = scrollContainer.clientHeight;
