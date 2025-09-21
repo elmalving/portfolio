@@ -33,23 +33,20 @@ globalStyle('*, *::before, *::after', {
     padding: 0,
 });
 
-globalStyle('body', {
-    display: 'flex',
+globalStyle('html, body, #root', {
     width: '100%',
-    height: '100vh',
+    height: '100%',
+});
+globalStyle('html', {
+    overflowY: 'scroll',
+});
+globalStyle('body', {
     color: colors.white,
     fontFamily: 'Orbitron',
-    overflow: 'hidden',
+    overflowY: 'visible',
 });
 globalStyle('body.mobile', {
     userSelect: 'none',
-});
-
-globalStyle('#root', {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    height: '100%',
 });
 
 globalStyle('a', {

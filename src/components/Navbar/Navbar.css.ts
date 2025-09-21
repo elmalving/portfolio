@@ -2,7 +2,6 @@ import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { colors } from '../../css/tokens';
 
 export const header = style({
-    display: 'flex',
     width: '100%',
     height: '6%',
     backgroundColor: colors.darkGreen,
@@ -11,16 +10,12 @@ export const header = style({
 
 export const navbar = style({
     display: 'flex',
-    width: '75%',
     height: '100%',
-    gap: '5%',
-    margin: '0 auto',
+    gap: '60px',
 
     '@media': {
         '(max-width: 768px)': {
-            width: '100%',
-            gap: '12%',
-            marginLeft: '10%'
+            gap: '30px',
         },
     },
 });
@@ -34,10 +29,13 @@ const transfusion = keyframes({
     '100%': { color: colors.green },
 });
 export const navBrand = style({
+    textAlign: 'center',
     fontSize: '1.25rem',
     fontWeight: 'bold',
     whiteSpace: 'nowrap',
     animation: `${transfusion} 3s 0.5s linear infinite`,
+    marginLeft: '12%',
+    marginRight: '5%',
 });
 
 export const navbarToggler = style({
@@ -45,12 +43,13 @@ export const navbarToggler = style({
     border: `1px solid ${colors.blackAlpha}`,
     borderRadius: '0.375rem',
     padding: '0.25rem 0.75rem',
+    marginLeft: 'auto',
+    marginRight: '2%'
 });
 
 export const navList = style({
     display: 'flex',
-    gap: '15%',
-    padding: '0 8%',
+    gap: '35px',
     fontSize: '115%',
 });
 
@@ -60,6 +59,7 @@ export const langButton = style({
 });
 
 export const langImage = style({
+    width: 'auto',
     borderRadius: '15%',
     border: `3px solid ${colors.white}`,
 });

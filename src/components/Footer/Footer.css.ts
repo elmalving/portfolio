@@ -3,7 +3,6 @@ import { colors } from '../../css/tokens';
 
 export const footer = style({
     display: 'flex',
-    flexDirection: 'column',
     width: '100%',
     height: '3%',
     textAlign: 'center',

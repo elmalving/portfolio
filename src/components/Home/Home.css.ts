@@ -91,13 +91,12 @@ export const contactList = style({
     },
 });
 globalStyle(`${contactList} > a`, {
-    display: 'flex',
-    width: 'auto',
     height: '100%',
     margin: '0 auto',
     borderRadius: '50%',
 });
 globalStyle(`${contactList} > a > img`, {
+    width: 'auto',
     transition: 'transform 0.3s',
 });
 globalStyle(`${contactList} > a > img:hover`, {
