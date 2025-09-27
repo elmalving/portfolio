@@ -67,7 +67,7 @@ Contributions are welcome! Feel free to open issues and pull requests.
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENSE](https://github.com/elmalving/portfolio/blob/main/LICENSE) file for details.
+This project is licensed under the Apache License - see the [LICENSE](https://github.com/elmalving/portfolio/blob/master/LICENSE) file for details.
 
 ## Acknowledgments
 
