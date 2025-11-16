@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import * as assets from '../../assets';
 import * as styles from './Navbar.css';
 import { useIsSmallWindow } from '../../hooks/useIsSmallWindow';
 import { useTranslator } from '../../contexts/translator';
 
-const DesktopMenu = () => {
+const NavMenu = () => {
     return (
         <ul className={styles.navList}>
             <li>
@@ -20,17 +21,27 @@ const DesktopMenu = () => {
     );
 };
 
-const MobileToggler = () => {
+const MobileToggler = ({
+    setDropdownOpen,
+}: {
+    setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
     return (
-        <button className={styles.navbarToggler}>
-            <img src={assets.navbarTogglerIcon} />
-        </button>
+        <>
+            <button
+                onClick={() => setDropdownOpen((prev) => !prev)}
+                className={styles.navbarToggler}
+            >
+                <img src={assets.navbarTogglerIcon} />
+            </button>
+        </>
     );
 };
 
 export const Navbar = () => {
     const isSmallWindow = useIsSmallWindow();
     const { language, setLanguage } = useTranslator();
+    const [dropDownOpen, setDropdownOpen] = useState(false);
 
     const changeLanguage = () => {
         setLanguage((prev) => {
@@ -47,7 +58,7 @@ export const Navbar = () => {
                 <NavLink to="/" className={styles.navBrand}>
                     Mykyta Hromov
                 </NavLink>
-                {!isSmallWindow && <DesktopMenu />}
+                {!isSmallWindow && <NavMenu />}
                 <button
                     className={styles.langButton}
                     type="button"
@@ -55,12 +66,20 @@ export const Navbar = () => {
                     aria-label="Change the language"
                 >
                     <img
-                        className={styles.langImage}
                         src={assets.countryFlags[language]}
                         alt={language === 'en' ? 'English flag' : 'Czech flag'}
                     />
                 </button>
-                {isSmallWindow && <MobileToggler />}
+                {isSmallWindow && (
+                    <>
+                        <MobileToggler setDropdownOpen={setDropdownOpen} />
+                        <div
+                            className={`${styles.dropdownContainer} ${dropDownOpen ? styles.open : ''}`}
+                        >
+                            <NavMenu />
+                        </div>
+                    </>
+                )}
             </nav>
         </header>
     );

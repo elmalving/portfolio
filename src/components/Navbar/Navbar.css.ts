@@ -1,26 +1,28 @@
-import { globalStyle, keyframes, style } from '@vanilla-extract/css';
+import { keyframes, style } from '@vanilla-extract/css';
 import { colors } from '../../css/tokens';
 
 export const header = style({
     width: '100%',
     height: '6%',
-    backgroundColor: colors.darkGreen,
-    boxShadow: '0 1px 5px rgba(15, 75, 0, 0.6)',
 });
 
 export const navbar = style({
     display: 'flex',
-    height: '100%',
+    flexWrap: 'wrap',
+    alignItems: 'center',
     gap: '60px',
+    padding: '0.5rem 1rem 0.5rem 0',
+    position: 'relative',
+    zIndex: 1,
+    backgroundColor: colors.darkGreen,
+    boxShadow: '0 3px 5px -2px rgba(15, 75, 0, 0.6)',
 
     '@media': {
         '(max-width: 768px)': {
-            gap: '30px',
+            justifyContent: 'space-between',
+            gap: '0',
         },
     },
-});
-globalStyle(`${navbar} > *`, {
-    margin: 'auto 0',
 });
 
 const transfusion = keyframes({
@@ -36,30 +38,50 @@ export const navBrand = style({
     animation: `${transfusion} 3s 0.5s linear infinite`,
     marginLeft: '12%',
     marginRight: '5%',
+
+    '@media': {
+        '(max-width: 768px)': {
+            marginRight: 0,
+        },
+    },
 });
 
 export const navbarToggler = style({
-    height: '75%',
+    width: '60px',
+    height: '42px',
     border: `1px solid ${colors.blackAlpha}`,
     borderRadius: '0.375rem',
-    padding: '0.25rem 0.75rem',
-    marginLeft: 'auto',
-    marginRight: '2%'
+    padding: '0.2rem 0',
 });
 
 export const navList = style({
     display: 'flex',
     gap: '35px',
     fontSize: '115%',
+    padding: '0.6rem 0',
+
+    '@media': {
+        '(max-width: 768px)': {
+            flexDirection: 'column',
+            gap: '25px',
+            textAlign: 'right',
+            marginLeft: 'auto',
+        },
+    },
+});
+export const dropdownContainer = style({
+    flexBasis: '100%',
+    maxHeight: 0,
+    overflow: 'hidden',
+    transition: 'max-height 0.35s ease',
+});
+export const open = style({
+    maxHeight: '140px',
 });
 
 export const langButton = style({
-    height: '65%',
-    borderRadius: '15%',
-});
-
-export const langImage = style({
-    width: 'auto',
+    width: '37px',
+    height: '37px',
     borderRadius: '15%',
     border: `3px solid ${colors.white}`,
 });
