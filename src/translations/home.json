@@ -1,18 +1,39 @@
 {
     "Welcome": { "cz": "Vítejte" },
-    "In 2020 I have completed programming courses at the highly acclaimed “Hillel IT School”. (https://ithillel.ua) The courses consisted of in-dept learning and practising Web Development {HTML, CSS, JS, mySQL, C#}, I also have a high level of proficiency in the Python programming language.": {
-        "cz": "V roce 2020 jsem absolvoval kurzy programování na vysoce uznávané „Hillel IT School“. (https://ithillel.ua) Kurzy se skládaly z důkladného učení a procvičování vývoje webu {HTML, CSS, JS, mySQL, C#}, také mám vysokou úroveň znalosti programovacího jazyka Python."
+    "In 2020, I completed a web-development bootcamp at the highly acclaimed": {
+        "cz": "V roce 2020 jsem absolvoval bootcamp zaměřený na vývoj webových aplikací na renomované"
     },
-    "Currently, I have little professional experience as a programmer working on \"Social media scheduler\" project at Better Plan, but I am fully ready to devote myself to enhance my skill set and deliver high-quality solutions.": {
-        "cz": "V současné době mám málo profesionálních zkušeností jako programátor pracující na projektu „Social media scheduler“ ve společnosti Better Plan, ale jsem plně připraven věnovat se rozšiřování svých dovedností a poskytování vysoce kvalitních řešení."
+    "and was invited to join Better Plan as a Full-Stack Developer. I worked there until March 2021, when I left to focus on my high-school examinations.": {
+        "cz": "a byl jsem pozván, abych se připojil k Better Plan jako Full-Stack Developer. Pracoval jsem tam až do března 2021, kdy jsem odešel, abych se mohl soustředit na maturitní zkoušky."
     },
-    "I embrace challenges and approach them with a growth mindset, always seeking new opportunities to broaden my expertise. With a drive for constant improvement, I am eager to take on new learning experiences and contribute to impactful projects.": {
-        "cz": "Přijímám výzvy a přistupuji k nim s růstovým myšlením, vždy hledám nové příležitosti, jak rozšířit své odborné znalosti. S touhou po neustálém zlepšování se těším na nové vzdělávací zkušenosti a přispívám k účinným projektům."
+    "After a year of learning Czech, I began my studies in Applied Informatics at": {
+        "cz": "Po roce studia češtiny jsem zahájil studium Aplikované informatiky na"
     },
-    "Sociable and have experience working in a team.": {
-        "cz": "Společenský a mám zkušenosti s prací v týmu."
+    "University of Jan Evangelista": {
+        "cz": "Univerzitě Jana Evangelisty"
     },
-    "Fluent in English and Czech, native in Russian and Ukrainian.": {
-        "cz": "Mluvím plynně anglicky a česky, rodilý ruský a ukrajinský."
+    "Two months later, I received a full-time offer from": {
+        "cz": "O dva měsíce později jsem obdržel nabídku na plný úvazek od"
+    },
+    "as a Software Engineer. I worked in the Platform team, focusing on performance optimization and the development of design components leveraged by Product teams.": {
+        "cz": "jako Software Engineer. Pracoval jsem v Platformovém týmu, zaměřeném na optimalizaci výkonu a vývoj designových komponent využívaných produktovými týmy."
+    },
+    "During my time at Pipedrive, I significantly improved my skills in JavaScript, TypeScript, and React, while gaining experience with Node.js frameworks, cloud infrastructure, and SQL databases.": {
+        "cz": "Během svého působení v Pipedrive jsem výrazně zlepšil své dovednosti v JavaScript, TypeScript a React, a zároveň jsem získal zkušenosti s frameworky Node.js, cloudovou infrastrukturou a databázemi SQL."
+    },
+    "In late 2024, I decided to pursue studies abroad, leaving the company in early 2025 to enroll in a program in": {
+        "cz": "Na konci roku 2024 jsem se rozhodl pokračovat ve studiu v zahraničí, a tak jsem na začátku roku 2025 opustil práce, abych se zapsal do programu na"
+    },
+    "University of Malaga": {
+        "cz": "Univerzitě v Malaze"
+    },
+    "focused on cybersecurity, machine learning, and artificial intelligence.": {
+        "cz": "zaměřeného na kybernetickou bezpečnost, strojové učení a umělou inteligenci."
+    },
+    "Upon returning from Spain, I focused on my Bachelor's thesis. By late 2025, once all the necessary administrative processes were completed, I had the time to continue developing both my technical and soft skills.": {
+        "cz": "Po návratu ze Španělska jsem se soustředil na svou bakalářskou práci. Koncem roku 2025, jakmile byly dokončeny všechny potřebné administrativní záležitosti, jsem měl čas pokračovat ve zdokonalování svých technických i soft dovedností."
+    },
+    "While I’m not actively job hunting, I’m always open to exciting opportunities. You can reach me via LinkedIn or Telegram below.": {
+        "cz": "I když momentálně aktivně nehledám práci, jsem vždy otevřen zajímavým příležitostem. Můžete mě kontaktovat přes LinkedIn nebo Telegramu níže."
     }
 }

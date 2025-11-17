@@ -27,14 +27,12 @@ const MobileToggler = ({
     setDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
     return (
-        <>
-            <button
-                onClick={() => setDropdownOpen((prev) => !prev)}
-                className={styles.navbarToggler}
-            >
-                <img src={assets.navbarTogglerIcon} />
-            </button>
-        </>
+        <button
+            onClick={() => setDropdownOpen((prev) => !prev)}
+            className={styles.navbarToggler}
+        >
+            <img src={assets.navbarTogglerIcon} />
+        </button>
     );
 };
 

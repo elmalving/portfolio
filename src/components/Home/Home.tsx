@@ -13,7 +13,7 @@ const SocialMediaThumbnail = ({
     src: string;
 }) => {
     return (
-        <a href={href}>
+        <a target="_blank" rel="noopener noreferrer" href={href}>
             <img title={title} src={src} alt={title} />
         </a>
     );
@@ -23,7 +23,7 @@ export const Home = () => {
     const textCards = useRef<HTMLElement[]>([]);
     const { translate } = useTranslator('home');
 
-    const TextCard = ({ text }: { text: string }) => (
+    const TextCard = ({ children }: { children: React.ReactNode }) => (
         <div
             ref={(el) => {
                 if (el && !textCards.current.includes(el)) {
@@ -31,7 +31,7 @@ export const Home = () => {
                 }
             }}
         >
-            {translate(text)}
+            {children}
         </div>
     );
 
@@ -65,15 +65,84 @@ export const Home = () => {
                 onScroll={articleScroll}
                 className={styles.mainTextContainer}
             >
-                <TextCard text="In 2020 I have completed programming courses at the highly acclaimed “Hillel IT School”. (https://ithillel.ua) The courses consisted of in-dept learning and practising Web Development {HTML, CSS, JS, mySQL, C#}, I also have a high level of proficiency in the Python programming language." />
+                <TextCard>
+                    {translate(
+                        'In 2020, I completed a web-development bootcamp at the highly acclaimed'
+                    )}{' '}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ithillel.ua"
+                    >
+                        <u>Hillel IT School</u>
+                    </a>{' '}
+                    {translate(
+                        'and was invited to join Better Plan as a Full-Stack Developer. I worked there until March 2021, when I left to focus on my high-school examinations.'
+                    )}
+                </TextCard>
 
-                <TextCard text='Currently, I have little professional experience as a programmer working on "Social media scheduler" project at Better Plan, but I am fully ready to devote myself to enhance my skill set and deliver high-quality solutions.' />
+                <TextCard>
+                    {translate(
+                        'After a year of learning Czech, I began my studies in Applied Informatics at'
+                    )}{' '}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.ujep.cz"
+                    >
+                        <u>{translate('University of Jan Evangelista')}</u>
+                    </a>
+                    .
+                </TextCard>
 
-                <TextCard text="I embrace challenges and approach them with a growth mindset, always seeking new opportunities to broaden my expertise. With a drive for constant improvement, I am eager to take on new learning experiences and contribute to impactful projects." />
+                <TextCard>
+                    {translate(
+                        'Two months later, I received a full-time offer from'
+                    )}{' '}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.pipedrive.com"
+                    >
+                        <u>Pipedrive</u>
+                    </a>{' '}
+                    {translate(
+                        'as a Software Engineer. I worked in the Platform team, focusing on performance optimization and the development of design components leveraged by Product teams.'
+                    )}
+                </TextCard>
 
-                <TextCard text="Sociable and have experience working in a team." />
+                <TextCard>
+                    {translate(
+                        'During my time at Pipedrive, I significantly improved my skills in JavaScript, TypeScript, and React, while gaining experience with Node.js frameworks, cloud infrastructure, and SQL databases.'
+                    )}
+                </TextCard>
 
-                <TextCard text="Fluent in English and Czech, native in Russian and Ukrainian." />
+                <TextCard>
+                    {translate(
+                        'In late 2024, I decided to pursue studies abroad, leaving the company in early 2025 to enroll in a program in'
+                    )}{' '}
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.uma.es"
+                    >
+                        <u>{translate('University of Malaga')}</u>
+                    </a>{' '}
+                    {translate(
+                        'focused on cybersecurity, machine learning, and artificial intelligence.'
+                    )}
+                </TextCard>
+
+                <TextCard>
+                    {translate(
+                        "Upon returning from Spain, I focused on my Bachelor's thesis. By late 2025, once all the necessary administrative processes were completed, I had the time to continue developing both my technical and soft skills."
+                    )}
+                </TextCard>
+                <TextCard>
+                    {translate(
+                        'While I’m not actively job hunting, I’m always open to exciting opportunities. You can reach me via LinkedIn or Telegram below.'
+                    )}
+                </TextCard>
             </article>
             <div className={styles.contactList}>
                 <SocialMediaThumbnail
