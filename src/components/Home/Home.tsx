@@ -138,6 +138,7 @@ export const Home = () => {
                         "Upon returning from Spain, I focused on my Bachelor's thesis. By late 2025, once all the necessary administrative processes were completed, I had the time to continue developing both my technical and soft skills."
                     )}
                 </TextCard>
+
                 <TextCard>
                     {translate(
                         'While I’m not actively job hunting, I’m always open to exciting opportunities. You can reach me via LinkedIn or Telegram below.'
