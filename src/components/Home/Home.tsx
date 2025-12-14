@@ -38,21 +38,22 @@ export const Home = () => {
     const articleScroll = (event: React.UIEvent<HTMLDivElement>) => {
         const scrollContainer = event.currentTarget;
 
-        const containerHeight = scrollContainer.clientHeight;
-        const containerCenter = containerHeight / 2;
-        const scrollPosition = scrollContainer.scrollTop;
+        requestAnimationFrame(() => {
+            const containerRect = scrollContainer.getBoundingClientRect();
+            const containerCenter =
+                containerRect.top + containerRect.height / 2;
 
-        textCards.current.forEach((textCard) => {
-            const textCardTop = textCard.offsetTop;
-            const textCardCenter =
-                textCardTop - scrollPosition + textCard.clientHeight / 2;
-            const distanceFromCenter = Math.abs(
-                textCardCenter - containerCenter
-            );
+            textCards.current.forEach((textCard) => {
+                const textCardRect = textCard.getBoundingClientRect();
+                const textCardCenter =
+                    textCardRect.top + textCardRect.height / 2;
 
-            const translateZValue = distanceFromCenter / 3;
+                const distanceFromCenter = Math.abs(
+                    textCardCenter - containerCenter
+                );
 
-            textCard.style.transform = `translateZ(-${translateZValue}px)`;
+                textCard.style.transform = `translateZ(-${distanceFromCenter / 3}px)`;
+            });
         });
     };
 
