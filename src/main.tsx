@@ -6,7 +6,8 @@ import {
     createBrowserRouter,
     createRoutesFromElements,
 } from 'react-router-dom';
-import { ErrorPage, Layout } from './pages';
+import { Layout } from './layout';
+import { ErrorPage } from './pages';
 import { Home, Privacy, Projects } from './components';
 import './css';
 

@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { colors } from '../../css/tokens';
+import { colors } from '../css/tokens';
 
 export const content = style({
     display: 'flex',

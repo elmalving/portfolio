@@ -9,7 +9,7 @@ type TranslatorContextType = {
 
 type Translations = Record<string, Record<Language, string>>;
 
-export const TranslatorContext = createContext<TranslatorContextType | null>(
+const TranslatorContext = createContext<TranslatorContextType | null>(
     null
 );
 
@@ -47,7 +47,7 @@ export function useTranslator(filename?: string) {
 
     if (!context) {
         throw new Error(
-            'useTranslator must be used within a TranslatorProvider'
+            `${useTranslator.name} must be used within a ${TranslatorProvider.name}`
         );
     }
 
