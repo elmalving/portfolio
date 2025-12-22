@@ -5,3 +5,7 @@ export const colors = {
     darkAlpha: 'rgba(33, 37, 41, 0.75)',
     blackAlpha: 'rgba(0, 0, 0, 0.15)',
 };
+
+export const padding = {
+    sm: '5%',
+};

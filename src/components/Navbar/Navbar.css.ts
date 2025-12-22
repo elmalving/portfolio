@@ -1,29 +1,22 @@
 import { keyframes, style } from '@vanilla-extract/css';
-import { colors } from '../../css/tokens';
-
-const VERTICAL_PADDING = 1;
+import { colors, padding } from '../../css/tokens';
 
 export const header = style({
     display: 'flex',
     width: '100%',
     height: '6%',
-
-    '@media': {
-        '(max-width: 768px)': {
-            marginBottom: `${VERTICAL_PADDING * 2}%`,
-        },
-    },
 });
 
 export const headerArea = style({
     position: 'fixed',
     display: 'flex',
     width: '100%',
+    minHeight: '6%',
     alignItems: 'center',
-    padding: `${VERTICAL_PADDING}% 5% ${VERTICAL_PADDING}% 12%`,
+    paddingRight: padding.sm,
+    paddingLeft: '12%',
     backgroundColor: colors.darkGreen,
     boxShadow: '0 3px 5px -2px rgba(15, 75, 0, 0.6)',
-    overflow: 'hidden',
     zIndex: 1,
 
     '@media': {
@@ -68,10 +61,18 @@ export const navContainer = style({
 
     '@media': {
         '(max-width: 768px)': {
+            position: 'absolute',
             width: '100%',
+            top: '98%',
+            left: 0,
             maxHeight: 0,
+            paddingRight: padding.sm,
             margin: 0,
             transition: 'max-height 0.35s ease',
+            backgroundColor: colors.darkGreen,
+            boxShadow: '0 3px 5px -2px rgba(15, 75, 0, 0.6)',
+            overflow: 'hidden',
+            zIndex: 1,
         },
     },
 });
